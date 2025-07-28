@@ -570,8 +570,8 @@
             <h2 class="contact-title">Contactez Espace-Jardin80</h2>
             <div class="contact-grid">
                 <div class="contact-form">
-                    <h3>Demande de Devis Personnalisé</h3>
-                    <form>
+                    <h3>Demande de Devis</h3>
+                    <form action="mailto:Brandon.camus26@gmail.com" method="post" enctype="text/plain">
                         <div class="form-group">
                             <label for="nom">Nom complet</label>
                             <input type="text" id="nom" name="nom" required>
@@ -599,7 +599,7 @@
                             <label for="message">Description détaillée de vos besoins</label>
                             <textarea id="message" name="message" rows="4" placeholder="Décrivez précisément vos besoins, la surface à traiter, la fréquence souhaitée, l'état actuel de votre terrain..."></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Envoyer ma Demande</button>
+                        <button type="submit" class="submit-btn">Envoyer ma Demande par Email</button>
                     </form>
                 </div>
 
@@ -663,23 +663,6 @@
             document.querySelector('#contact').scrollIntoView({
                 behavior: 'smooth'
             });
-        });
-
-        // Gestion du formulaire
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Animation de succès
-            const button = document.querySelector('.submit-btn');
-            const originalText = button.textContent;
-            button.textContent = '✓ Envoyé !';
-            button.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
-            
-            setTimeout(() => {
-                alert('Merci pour votre demande ! Nous vous contacterons très rapidement pour établir votre devis personnalisé.');
-                button.textContent = originalText;
-                button.style.background = 'linear-gradient(135deg, #4a7c59, #90EE90)';
-            }, 1500);
         });
 
         // Effet de parallaxe sur le header
